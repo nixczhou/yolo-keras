@@ -30,3 +30,6 @@ model = keras_cv.models.YOLOV8Detector.from_preset(
 ```python
 python train.py
 ```
+
+## Full Tutorial with Default Yolov8 Backbone
+Link: https://keras.io/examples/vision/yolov8/
