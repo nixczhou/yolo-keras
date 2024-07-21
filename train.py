@@ -13,11 +13,12 @@ labels = {
     "classes": tf.constant([[1, 1, 1]], dtype=tf.int64),
 }
 
-# Create the model with ResNet50 backbone
+# Create the model with mobilenet backbone
 model = keras_cv.models.YOLOV8Detector.from_preset(
     num_classes=20,
     bounding_box_format="xywh",
-    preset="mobilenet_v3_large",
+    preset="mobilenet_v3_large_imagenet",
+    load_weights=True,
 )
 
 
