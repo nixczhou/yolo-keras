@@ -8,12 +8,21 @@ pip install -r requirements-jax-cuda.txt
 ## Change Backbone
 Refer: https://keras.io/api/keras_cv/models/tasks/yolo_v8_detector/
 ```python
-# Create the model with ResNet50 backbone, can load pretrained weight if needed
+# Create the model with ResNet50 backbone
 model = keras_cv.models.YOLOV8Detector.from_preset(
     num_classes=20,
     bounding_box_format="xywh",
     preset="mobilenet_v3_large",
-    load_weights=False,
+)
+```
+
+```python
+# Can load pretrained weight if needed
+model = keras_cv.models.YOLOV8Detector.from_preset(
+    num_classes=20,
+    bounding_box_format="xywh",
+    preset="mobilenet_v3_large_imagenet",
+    load_weights=True,
 )
 ```
 
